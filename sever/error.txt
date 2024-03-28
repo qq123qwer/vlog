@@ -1,0 +1,16 @@
+1.  NodeRSA，password加密错误 （公钥.encrypt()is not function） 
+    解决: 写法错误:new NodeRSA(getPublickeySyn()).encrypt(val , 'base64')
+
+
+2.req.body === [Object: null prototype] { 'username': '2222' } 
+要获取，必须解构赋值let {username} = req.body
+
+3.exec方法和then
+两者返回的都是promise对象
+
+exec一般用于独立的动作一次性执行
+then用于连续性的动作
+
+分页方法：查询的query传进去分页方法，通过附加其他查询来实现
+
+空数组，空对象都是true

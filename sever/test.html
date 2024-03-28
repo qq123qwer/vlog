@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <script>
+    axios({
+      url:'/regist',
+      method:'post',
+      baseURL:'http://127.0.0.1:8080',
+      data:{
+        email:'2940077027@qq.com',
+        password:'123456' ,
+      } ,
+      withCredentials:true,
+    })
+  
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <scrip src="node_modules/socket.io/client-dist/socket.io.min.js"></scrip>
+</head>
+<body>
+  <p></p>
+  <script>
+    // 发送信息
+    let ws = new WebSocket("ws://127.0.0.1:8888")
+    ws.onopen= function(){
+      console.log('socket连接已打开')
+      ws.send('你好')
+    }
+    ws.onmessage = function(e){
+      console.log(e.data)
+    }
+  </script>
+  
+</body>
+</html>
